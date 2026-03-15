@@ -28,6 +28,8 @@ DATABASES = {
 }
 ```
 
+If you need a custom database backend you can either inherit from `django_fqq.backend.base.DatabaseWrapper` or set `ops_class = DatabaseOperations` from `django_fqq.backend.operations.DatabaseOperations` in your DatabaseWrapper.
+
 ### 2. Add the app
 
 ```python
@@ -46,6 +48,8 @@ FQQ_SHARED_APPS = ["auth", "contenttypes"]
 ```
 
 ### 4. Add the middleware (optional)
+
+The middleware provides very basic routing of requests to a specific database schema. For a more robust solution that handles migrations and other functionality, check out [django-tenants](https://pypi.org/project/django-tenants/).
 
 ```python
 MIDDLEWARE = [
