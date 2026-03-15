@@ -9,6 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        django-version: ["django42", "django52", "django60"]
 
     services:
       postgres:
@@ -41,4 +44,4 @@ jobs:
         run: uv sync
 
       - name: Run tests
-        run: uv run pytest
+        run: uv run tox -e ${{ matrix.django-version }}
