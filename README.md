@@ -1,5 +1,7 @@
 # django-fqq
 
+[![Tests](https://github.com/apricotdotcool/django-fqq/actions/workflows/tests.yml/badge.svg)](https://github.com/apricotdotcool/django-fqq/actions/workflows/tests.yml)
+
 Generate schema-prefixed table names with the Django ORM.
 
 django-fqq provides a custom database backend that wraps Django's built-in PostgreSQL backend. It overrides `quote_name` to prepend the active schema to table names — so `"my_table"` becomes `"my_schema"."my_table"` automatically. No changes to your models or queries required.
@@ -114,7 +116,7 @@ Schema state is stored in a `ContextVar`, so it's safe across concurrent async r
 
 ## Development
 
-Requires Python 3.12+ and Django 6.0+.
+Requires Python 3.12+ and Django 4.2+. Tested against Django 4.2, 5.2, and 6.0.
 
 ```bash
 uv sync

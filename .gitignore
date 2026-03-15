@@ -6,9 +6,14 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
-.venv
+# Python tools
+.tox/
 
+# Virtual environments
+.venv/
+
+# Settings
 .env
 
+# Agents
 .claude/

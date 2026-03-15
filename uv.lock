@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.12"
 
 [options]
-exclude-newer = "2026-03-08T03:26:03.56903Z"
+exclude-newer = "2026-03-08T04:29:20.256982Z"
 exclude-newer-span = "P1W"
 
 [[package]]
@@ -72,6 +72,9 @@ wheels = [
 name = "django-fqq"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "django" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -85,6 +88,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "django", specifier = ">=4.2" }]
 
 [package.metadata.requires-dev]
 dev = [
