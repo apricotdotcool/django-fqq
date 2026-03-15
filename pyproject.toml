@@ -1,12 +1,15 @@
 [project]
 name = "django-fqq"
 version = "0.1.0"
-description = "Add your description here"
+description = "Generate PostgreSQL schema-prefixed table names with the Django ORM"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "django>=4.2",
 ]
+
+[project.urls]
+Repository = "https://github.com/apricotdotcool/django-fqq"
 
 [dependency-groups]
 dev = [
