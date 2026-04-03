@@ -46,8 +46,3 @@ jobs:
 
       - name: Run tests
         run: uv run tox -e ${{ matrix.django-version }}
-
-  notify:
-    uses: apricotdotcool/reusable-workflows/.github/workflows/notification.yml@main
-    with:
-      message: "Tests complete!"
